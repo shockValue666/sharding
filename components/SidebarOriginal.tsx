@@ -6,8 +6,6 @@ import {BiSearch} from 'react-icons/bi'
 import Box from './Box';
 import SidebarItem from './SidebarItem';
 import Library from './Library';
-import Button from './Button';
-import LogInOrSignUp from './LogInOrSignUp';
 
 interface SidebarProps{
     children:React.ReactNode
@@ -34,13 +32,12 @@ const Sidebar: React.FC<SidebarProps> = ({
   ],[pathname])
 
   return (
-    <div className='flex flex-col  '>
-      <div className='hidden md:flex gap-y-2 bg-black p-2 '>
-        <Box className='flex-1 w-1/3 text-white font-bold text-[28px] px-8 py-3 '>
-            Shard
-        </Box>
+    <div className='flex h-full border-8 border-yellow-600 '>
+    {/* <div className='flex flex-col h-full border-8 border-yellow-600 '> */}
+      <div className='hidden md:flex flex-col gap-y-2 bg-black h-full w-[300px] p-2 border border-green-500'>
+      {/* <div className='hidden md:flex gap-y-2 bg-black p-2 border border-green-500'> */}
         {/* poutsa */}
-        <Box className=" flex-2 w-2/5">
+        <Box>
           <div className='flex gap-y-4 px-5 py-4 '>
             main
             {
@@ -54,15 +51,14 @@ const Sidebar: React.FC<SidebarProps> = ({
             }
           </div>
         </Box>
-        <Box className='flex-1 w-1/3'>
-          {/* <Library/> */}
-          <LogInOrSignUp/>
+        <Box className='overflow-y-auto h-full '>
+          <Library/>
         </Box>
       </div>
       {/* <main className='h-full flex-1 overflow-y-auto py-2 border border-yellow-00'> */}
-      {/* <main className='h-full flex-1 overflow-y-auto border-4 border-red-500'>
+      <main className='h-full flex-1 overflow-y-auto border-4 border-red-500'>
         {children}
-      </main> */}
+      </main>
     </div>
   )
 }

@@ -27,8 +27,8 @@ export default function RootLayout({
           <UserProvider>
             <ModalProvider/>
             <Sidebar>
-              {children}
             </Sidebar>
+            {children}
           </UserProvider>
         </SupabaseProvider>
       </body>

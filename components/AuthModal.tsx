@@ -40,6 +40,7 @@ const AuthModal = () => {
             theme='dark'
             providers={["twitter"]}
             magicLink
+            onlyThirdPartyProviders
             supabaseClient={supabaseClient}
             appearance={{
                 theme:ThemeSupa,
