@@ -1,12 +1,14 @@
 "use client";
 import { useRouter } from 'next/navigation';
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Button from './Button'
 import { useUser } from '@/hooks/useUser';
 import { useSupabaseClient } from '@supabase/auth-helpers-react';
 import toast from 'react-hot-toast';
 import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
 import useAuthModal from '@/hooks/useAuthModal';
+import ConnectButton from './ConnectButton';
+import { useAccount, useBalance } from 'wagmi'
 
 
 const LogInOrSignUp = () => {
@@ -14,6 +16,18 @@ const LogInOrSignUp = () => {
     const supabaseClient = useSupabaseClient();
     const router = useRouter();
     const {onOpen} = useAuthModal()
+    const account = useAccount();
+    const balance = useBalance()
+    const [address,setAddress] = useState("")
+
+    useEffect(()=>{
+        if(account.address){
+            setAddress(account.address)
+        }
+        if(account && balance){
+            console.log("account: ",account.address, " balance: ",balance.data)
+        }
+    },[account,balance])
 
 
 
@@ -31,8 +45,9 @@ const LogInOrSignUp = () => {
 
   return (
     <div className='flex justify-evenly items-center gap-x-4'>
+        <ConnectButton className='bg-white px-6 py-2'/>
                 {
-                    user ? (
+                    user && address ? (
                         <div className='flex gap-x-4 items-center justify-end'>
                             <Button
                                 onClick={handleLogout}
@@ -48,6 +63,7 @@ const LogInOrSignUp = () => {
                                 </Avatar>
 
                             </Button>
+                            <p className='text-white'>{address}</p>
                         </div>
                     ):
                     (

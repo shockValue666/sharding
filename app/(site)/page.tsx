@@ -1,6 +1,8 @@
+import ConnectButton from '@/components/ConnectButton'
 import Example from '@/components/Example'
 import Header from '@/components/Header'
 import ListItem from '@/components/ListItem'
+import Web3Mod from '@/components/Web3Mod'
 
 export default function Home() {
   return (
@@ -27,6 +29,10 @@ export default function Home() {
             tha ginw ekatommyriouxos prin ginw 25 xronwn!!!! (Site)
         </div>
         <Example/>
+        {/* <Web3Mod>
+            poutsa
+        </Web3Mod>
+        <ConnectButton/> */}
         {/* <Sidebar> */}
             gamw to theo
         {/* </Sidebar> */}

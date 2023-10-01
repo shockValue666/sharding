@@ -6,6 +6,8 @@ import SupabaseProvider from '@/providers/SupabaseProvider'
 import UserProvider from '@/providers/UserProvider'
 import ModalProvider from '@/providers/ModalProvider'
 import ToasterProvider from '@/providers/ToasterProvider'
+import Web3Mod from '@/components/Web3Mod'
+
 
 const font = Inter({ subsets: ['latin'] })
 
@@ -25,10 +27,12 @@ export default function RootLayout({
         <ToasterProvider/>
         <SupabaseProvider>
           <UserProvider>
-            <ModalProvider/>
-            <Sidebar>
-            </Sidebar>
-            {children}
+          <Web3Mod>
+              <ModalProvider/>
+              <Sidebar>
+              </Sidebar>
+              {children}
+            </Web3Mod>
           </UserProvider>
         </SupabaseProvider>
       </body>

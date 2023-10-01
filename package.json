@@ -20,6 +20,7 @@
     "@types/node": "20.6.3",
     "@types/react": "18.2.22",
     "@types/react-dom": "18.2.7",
+    "@web3modal/wagmi": "^3.0.2",
     "autoprefixer": "10.4.16",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.0.0",
@@ -38,6 +39,8 @@
     "tailwindcss": "3.3.3",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "5.2.2",
+    "viem": "^1.14.0",
+    "wagmi": "^1.4.2",
     "zustand": "^4.4.1"
   },
   "devDependencies": {
