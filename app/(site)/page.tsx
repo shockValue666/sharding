@@ -2,7 +2,7 @@ import ConnectButton from '@/components/ConnectButton'
 import Example from '@/components/Example'
 import Header from '@/components/Header'
 import ListItem from '@/components/ListItem'
-import Web3Mod from '@/components/Web3Mod'
+import Web3Mod from '@/providers/Web3Mod'
 
 export default function Home() {
   return (

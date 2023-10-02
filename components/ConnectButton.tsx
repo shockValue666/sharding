@@ -16,8 +16,8 @@ const ConnectButton:React.FC<ConnectButtonProps> = ({
   
     return (
       <>
-        <Button className={twMerge(``,className)} onClick={() => open()}>Open Connect Modal</Button>
-        <Button className={twMerge(``,className)} onClick={() => open({ view: 'Networks' })}>Open Network Modal</Button>
+        <Button className={twMerge(``,className)} onClick={() => open()}>Connect Wallet</Button>
+        {/* <Button className={twMerge(``,className)} onClick={() => open({ view: 'Networks' })}>Open Network Modal</Button> */}
       </>
     )
   }

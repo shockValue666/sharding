@@ -23,12 +23,13 @@ import {
 } from "@/components/ui/select"
 import { Input } from "@/components/ui/input"
 import Button from "./Button"
+import ProfileDropDown from "./ProfileDrop"
 
   
 
 export  default function Example() {
     return (
-        <div className="w-[50%]">
+        <div className="border border-yellow-300">
 
         <Avatar>
             <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
@@ -68,6 +69,7 @@ export  default function Example() {
                     <Button>Deploy</Button>
                 </CardFooter>
                 </Card>
+                <ProfileDropDown/>
 
       </div>
     )

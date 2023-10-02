@@ -6,7 +6,7 @@ import SupabaseProvider from '@/providers/SupabaseProvider'
 import UserProvider from '@/providers/UserProvider'
 import ModalProvider from '@/providers/ModalProvider'
 import ToasterProvider from '@/providers/ToasterProvider'
-import Web3Mod from '@/components/Web3Mod'
+import Web3Mod from '@/providers/Web3Mod'
 
 
 const font = Inter({ subsets: ['latin'] })
